@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import './App.css'
 import { Filtro } from './components/Filtro'
-import { Search } from './components/Search'
+import { Buscar } from './components/Buscar'
 import { PersonajesAleatorios } from './components/PersonajesAleatorios'
 
 function App() {
-  const [count, setCount] = useState('')
+  const [nombre, setNombre] = useState('')
 
   return (
     <>
-      <Filtro val={setCount} />
-      <Search valor={count} />
+      <Filtro setNombre={setNombre} />
+      <Buscar nombre={nombre}/>
       <PersonajesAleatorios />
     </>
   )

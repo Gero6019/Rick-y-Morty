@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 
-export const Search = ({nombre,estado})=>{
+export const Buscar = ({nombre})=>{
     const [personajes, setPersonajes] = useState([])
     
     const obtenerDatos = async ()=>{
-        let respuesta = await fetch('https://rickandmortyapi.com/api/character/?name='+nombre+"&status="+estado)
+        let respuesta = await fetch('https://rickandmortyapi.com/api/character/?name='+nombre)
         let datos = await respuesta.json()
         setPersonajes(datos.results)
     }
